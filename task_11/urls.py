@@ -21,7 +21,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    
+
     path('restaurants/list/',views.restaurant_list ,name='restaurant-list'),
     path('restaurants/<int:restaurant_id>/detail/',views.restaurant_detail ,name='restaurant-detail'),
 
@@ -34,6 +34,8 @@ urlpatterns = [
     path('signup/',views.signup ,name='signup'),
     path('signin/',views.signin ,name='signin'),
     path('signout/',views.signout ,name='signout'),
+
+    path('access-denied/',views.access_denied, name="access_denied")
 ]
 
 if settings.DEBUG:
